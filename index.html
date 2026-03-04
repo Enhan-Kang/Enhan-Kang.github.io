@@ -1,0 +1,446 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Nanxiang Jiang 姜楠翔</title>
+
+    <meta name="author" content="Nanxiang Jiang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="images\personal\icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+
+<style>
+  .hidden { display: none; }
+</style>
+<script>
+  function showPubs(id) {
+    if (id == 0) {
+      document.getElementById('pubs_selected').classList.remove('hidden');
+      document.getElementById('pubs_by_date').classList.add('hidden');
+      document.getElementById('select0').style = 'text-decoration:underline;';
+      document.getElementById('select1').style = '';
+    } else {
+      document.getElementById('pubs_selected').classList.add('hidden');
+      document.getElementById('pubs_by_date').classList.remove('hidden');
+      document.getElementById('select1').style = 'text-decoration:underline;';
+      document.getElementById('select0').style = '';
+    }
+    sessionStorage.setItem('activeTab', id);
+  }
+  window.addEventListener('DOMContentLoaded', function() {
+    var activeTab = sessionStorage.getItem('activeTab');
+    if (activeTab === null) activeTab = 1;
+    showPubs(parseInt(activeTab, 10));
+  });
+</script>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Nanxiang Jiang
+                </p>
+                <p>
+		I'm currently a third-year undergraduate student in Computer Science at <a href="https://ev.buaa.edu.cn/">Beihang University</a>, enrolled in the <a href="https://hc.buaa.edu.cn/xygk/gdlgxy.htm">Top Talents Program in CS</a>. 
+    I'm fortunate to be advised by <a href="https://iai.buaa.edu.cn/info/1013/1096.htm">Prof. Si Liu</span></a> and <a href="https://zhaoxinf.github.io/">Prof. Zhaoxin Fan</span></a>.
+                </p>
+                <p>
+    My research interests focus on understanding and modeling the dynamic 3D world from images and videos, with the broader goal of enabling intelligent embodied agents to perceive, act, and adapt in the ever-changing physical world.
+    Recently, I have been exploring 3D reconstruction, image and video generation, and Embodied AI toward this goal.
+                </p>
+                <p>
+    I was born into an artistic family in Nanjing, China, and I have a deep interest in architecture, classical music, and perceiving the 3D physical world. In my spare time, I enjoy playing the piano, origami, calligraphy, and studying symphonic conducting.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:jiangnx@buaa.edu.cn">Email</a> &nbsp;/&nbsp;
+                  <a href="data\nanxiang_jiang_CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="images/personal/wechat.jpg">WeChat</a> &nbsp;/&nbsp;
+                  <!-- <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp; -->
+                  <a href="https://github.com/nxjiang-jnx/">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images\personal\nanxiang_jiang_1.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/personal/nanxiang_jiang_1.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          
+          <!-- Publications heading with two buttons -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>
+                    Publications 
+                  </heading>
+                  &nbsp;(<a href="javascript:showPubs(0)" id="select0">show selected</a> / 
+                  <a href="javascript:showPubs(1)" id="select1">show all</a>)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="pubs"></div>
+
+          <div id="pubs_selected" class="hidden">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+            <!-- EraseAnything++ -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/EraseAnything++.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2603.00978">
+                  <span class="papertitle">EraseAnything++: Enabling Concept Erasure in Rectified Flow Transformers Leveraging Multi-Object Optimization</span>
+                </a>
+                <br>
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan (Advisor)*</a>,
+                <strong>Nanxiang Jiang*</strong>,                
+                <a href="https://tomguluson92.github.io/">Daiheng Gao</a>,
+                <a href="https://arnoldshijizhou.github.io/">Shiji Zhou</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>arxiv</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2603.00978">Paper</a>
+                /
+                <a href="https://github.com/nxjiang-jnx/EraseAnything-PlusPlus">Code</a>
+                <p>
+              </td>
+            </tr>
+            
+            <!-- Z-Erase -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/ZErase_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="data/Z_Erase_pdf.pdf">
+                  <span class="papertitle">Z-Erase: Enabling Concept Erasure in Single Stream Diffusion Transformers</span>
+                </a>
+                <br>
+                <strong>Nanxiang Jiang</strong>,                
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>,
+                <a href="https://github.com/wbs2788">Baisen Wang</a>,
+                <a href="https://tomguluson92.github.io/">Daiheng Gao</a>,
+                <a href="https://cjhcoder7.github.io/">Junhang Cheng</a>,
+                <a href="https://openreview.net/profile?id=~Jifeng_Guo1">Jifeng Guo</a>,
+                <a href="https://openreview.net/profile?id=~Yalan_Qin1">Yalian Qin</a>,
+                <a href="https://jinyeying.github.io/">Yeying Jin</a>,
+                <a href="https://openreview.net/profile?id=~Hongwei_Zheng4">Hongwei Zheng</a>,
+                <a href="https://openreview.net/profile?id=~Faguo_Wu1">Faguo Wu</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>arxiv</em>, 2026
+                <br>
+                <a href="data/Z_Erase_pdf.pdf">Paper</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- ReFlux -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/ReFlux_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2510.00635">
+                  <span class="papertitle">Erased, But Not Forgotten: Erased Rectified Flow Transformers Still Remain Unsafe Under Concept Attack</span>
+                </a>
+                <br>
+                <strong>Nanxiang Jiang</strong>,                
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>,
+                <a href="https://openreview.net/profile?id=~Enhan_Kang1">Enhan Kang</a>,
+                <a href="https://tomguluson92.github.io/">Daiheng Gao</a>,
+                <a href="https://yzhou.github.io/">Yun Zhou</a>,
+                <a href="https://openreview.net/profile?id=~Yanxia_Chang1">Yanxia Chang</a>,
+                <a href="https://www.zhengzhu.net/">Zheng Zhu</a>,
+                <a href="https://jinyeying.github.io/">Yeying Jin</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>CVPR findings</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2510.00635">Paper</a>
+                /
+                <a href="https://github.com/nxjiang-jnx/ReFlux">Code</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- RevAm -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/RevAm_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2510.03302">
+                  <span class="papertitle">Revoking Amnesia: RL-based Trajectory Optimization to Resurrect Erased Concepts in Diffusion Models</span>
+                </a>
+                <br>
+                <a href="https://tomguluson92.github.io/">Daiheng Gao*</a>,
+                <strong>Nanxiang Jiang*</strong>,
+                <a href="http://andi.ac/">Andi Zhang</a>,
+                <a href="https://shilin-lu.github.io/">Shilin Lu</a>,
+                <a href="https://openreview.net/profile?id=~Yufei_tang2">Yufei Tang</a>,
+                <a href="http://staff.ustc.edu.cn/~welbeckz/">Wenbo Zhou</a>,
+                <a href="http://staff.ustc.edu.cn/~zhangwm/">Weiming Zhang</a>,
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>
+                <br>
+                <em>arxiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2510.03302">Paper</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- RoboPARA -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images\RoboPARA_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2506.06683">
+                  <span class="papertitle">RoboPARA: Dual-Arm Robot Planning with Parallel Allocation and Recomposition Across Tasks</span>
+                </a>
+                <br>
+                <a href="https://dblp.org/pid/409/9848.html">Shiying Duan*</a>,
+                <a href="https://scholar.google.com/citations?user=ucklnZsAAAAJ&hl=zh-CN">Pei Ren*</a>,
+                <strong>Nanxiang Jiang</strong>,
+                <a href="https://chezhengping.xyz/">Zhengping Che</a>,
+                <a href="https://ecs.syr.edu/faculty/tang/">Jian Tang</a>,
+                <a href="https://openreview.net/profile?id=~Yifan_Sun6">Yifan Sun</a>,
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>ICLR</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2506.06683">Paper</a>
+                /
+                <a href="https://github.com/AiDuanshiying/RoboPARA">Code</a>
+                <p>
+              </td>
+            </tr>
+
+
+          </tbody></table>
+          </div>
+
+          <div id="pubs_by_date" class="hidden">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+            <!-- EraseAnything++ -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/EraseAnything++.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2603.00978">
+                  <span class="papertitle">EraseAnything++: Enabling Concept Erasure in Rectified Flow Transformers Leveraging Multi-Object Optimization</span>
+                </a>
+                <br>
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan (Advisor)*</a>,
+                <strong>Nanxiang Jiang*</strong>,                
+                <a href="https://tomguluson92.github.io/">Daiheng Gao</a>,
+                <a href="https://arnoldshijizhou.github.io/">Shiji Zhou</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>arxiv</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2603.00978">Paper</a>
+                /
+                <a href="https://github.com/nxjiang-jnx/EraseAnything-PlusPlus">Code</a>
+                <p>
+              </td>
+            </tr>
+            
+            <!-- Z-Erase -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/ZErase_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="data/Z_Erase_pdf.pdf">
+                  <span class="papertitle">Z-Erase: Enabling Concept Erasure in Single Stream Diffusion Transformers</span>
+                </a>
+                <br>
+                <strong>Nanxiang Jiang</strong>,                
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>,
+                <a href="https://github.com/wbs2788">Baisen Wang</a>,
+                <a href="https://tomguluson92.github.io/">Daiheng Gao</a>,
+                <a href="https://cjhcoder7.github.io/">Junhang Cheng</a>,
+                <a href="https://openreview.net/profile?id=~Jifeng_Guo1">Jifeng Guo</a>,
+                <a href="https://openreview.net/profile?id=~Yalan_Qin1">Yalian Qin</a>,
+                <a href="https://jinyeying.github.io/">Yeying Jin</a>,
+                <a href="https://openreview.net/profile?id=~Hongwei_Zheng4">Hongwei Zheng</a>,
+                <a href="https://openreview.net/profile?id=~Faguo_Wu1">Faguo Wu</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>arxiv</em>, 2026
+                <br>
+                <a href="data/Z_Erase_pdf.pdf">Paper</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- ReFlux -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/ReFlux_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2510.00635">
+                  <span class="papertitle">Erased, But Not Forgotten: Erased Rectified Flow Transformers Still Remain Unsafe Under Concept Attack</span>
+                </a>
+                <br>
+                <strong>Nanxiang Jiang</strong>,                
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>,
+                <a href="https://openreview.net/profile?id=~Enhan_Kang1">Enhan Kang</a>,
+                <a href="https://tomguluson92.github.io/">Daiheng Gao</a>,
+                <a href="https://yzhou.github.io/">Yun Zhou</a>,
+                <a href="https://openreview.net/profile?id=~Yanxia_Chang1">Yanxia Chang</a>,
+                <a href="https://www.zhengzhu.net/">Zheng Zhu</a>,
+                <a href="https://jinyeying.github.io/">Yeying Jin</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>CVPR findings</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2510.00635">Paper</a>
+                /
+                <a href="https://github.com/nxjiang-jnx/ReFlux">Code</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- RevAm -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images/RevAm_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2510.03302">
+                  <span class="papertitle">Revoking Amnesia: RL-based Trajectory Optimization to Resurrect Erased Concepts in Diffusion Models</span>
+                </a>
+                <br>
+                <a href="https://tomguluson92.github.io/">Daiheng Gao*</a>,
+                <strong>Nanxiang Jiang*</strong>,
+                <a href="http://andi.ac/">Andi Zhang</a>,
+                <a href="https://shilin-lu.github.io/">Shilin Lu</a>,
+                <a href="https://openreview.net/profile?id=~Yufei_tang2">Yufei Tang</a>,
+                <a href="http://staff.ustc.edu.cn/~welbeckz/">Wenbo Zhou</a>,
+                <a href="http://staff.ustc.edu.cn/~zhangwm/">Weiming Zhang</a>,
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>
+                <br>
+                <em>arxiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2510.03302">Paper</a>
+                <p>
+              </td>
+            </tr>
+
+            <!-- RoboPARA -->
+            <tr>
+              <td style="padding:15px;width:25%;vertical-align:middle">
+                <img src='images\RoboPARA_teaser.png' width=100% alt="">
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2506.06683">
+                  <span class="papertitle">RoboPARA: Dual-Arm Robot Planning with Parallel Allocation and Recomposition Across Tasks</span>
+                </a>
+                <br>
+                <a href="https://dblp.org/pid/409/9848.html">Shiying Duan*</a>,
+                <a href="https://scholar.google.com/citations?user=ucklnZsAAAAJ&hl=zh-CN">Pei Ren*</a>,
+                <strong>Nanxiang Jiang</strong>,
+                <a href="https://chezhengping.xyz/">Zhengping Che</a>,
+                <a href="https://ecs.syr.edu/faculty/tang/">Jian Tang</a>,
+                <a href="https://openreview.net/profile?id=~Yifan_Sun6">Yifan Sun</a>,
+                <a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a>,
+                <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun Wu</a>
+                <br>
+                <em>ICLR</em>, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2506.06683">Paper</a>
+                /
+                <a href="https://github.com/AiDuanshiying/RoboPARA">Code</a>
+                <p>
+              </td>
+            </tr>
+
+
+          
+
+
+          </tbody></table>
+          </div>
+
+          <!-- Awards -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>
+                    Selected Awards
+                  </heading>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0px 20px 20px 20px;vertical-align:top">
+                  <ul style="margin:0;padding-left:20px;line-height:1.6;">
+                    <li>Second Prize (National Level) in the Ministry of Education "Question & Conjecture" Program, 2026</li>
+                    <li>Beihang University TA Excellence Award, 2025</li>
+                    <li>Beihang University Research Excellence Award, 2025</li>
+                    <li>Beihang University Triple-A student, 2024</li>
+                    <li>National Scholarship, 2024</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Patents -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>
+                    Patents
+                  </heading>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0px 20px 20px 20px;vertical-align:top">
+                  <ul style="margin:0;padding-left:20px;line-height:1.6;">
+                    <li>Invention Patent (Granted), China. "Dual-Arm Robot Control Method and Dual-Arm Robot." Patent No. ZL20251075052.1, Granted Oct. 24, 2025.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Thank <a href="https://jonbarron.info/">Jon Barron</a> for sharing his website's 
+                    <a href="https://github.com/jonbarron/website">source code</a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
